@@ -10,6 +10,16 @@ abstract class Picker(
     private val _picks = options.toMutableList()
     val picks: List<Pick> = _picks
 
+    protected var picked: Pick? = null
+
+    fun pick(index: Int) {
+        picked = _picks[index]
+    }
+
+    fun pick(option: Pick) {
+        picked = option
+    }
+
     fun addPicks(picks: List<Pick>) {
         _picks.addAll(picks)
     }

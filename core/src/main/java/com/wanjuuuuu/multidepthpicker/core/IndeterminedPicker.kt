@@ -7,5 +7,5 @@ class IndeterminedPicker(
     options: List<Pick> = listOf()
 ) : Picker(id, displayName, description, options) {
 
-    override fun next(): Picker? = null
+    override fun next(): Picker? = picked?.next()
 }
